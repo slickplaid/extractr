@@ -1,0 +1,23 @@
+{
+  "name": "extractr",
+  "version": "1.0.0",
+  "description": "Validate SFC, uncompress RARs, and clean up after yourself.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slickplaid/extractr.git"
+  },
+  "author": "Evan Johnson <evan@slicklabs.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slickplaid/extractr/issues"
+  },
+  "homepage": "https://github.com/slickplaid/extractr#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.7"
+  }
+}

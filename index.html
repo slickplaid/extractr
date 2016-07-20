@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body { background: #333; color: #aaa; }
+    .output ul { list-style: none; }
+    .output ul li { padding: 5px 15px; display: block; }
+  </style>
+</head>
+<body>
+  <script>
+  var file = require('./lib/files/getFolders');
+
+  var output = document.createElement('div');
+
+  output.classList.add('output');
+
+  document.body.appendChild(output);
+
+  outputDirectories(output, 'y:/test');
+
+  function outputDirectories(parent, dir) {
+    file.getFolders(dir, function(err, out) {
+      if(out) {
+        let ul = document.createElement('ul');
+
+        out.forEach(function(item) {
+          let li = document.createElement('li');
+
+          li.textContent = item;
+
+          outputDirectories(li, item);
+
+          ul.appendChild(li);
+        });
+
+        parent.appendChild(ul);
+      }
+    });
+  }
+  </script>
+</body>
+</html>
